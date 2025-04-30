@@ -31,7 +31,7 @@ public class CheckGuest {
         inputGuest = sc.nextLine();
 
         for (int i = 0; i < guests.length; i++) {
-            if (inputGuest.toLowerCase().equals(guests[i].toLowerCase())) {
+            if (inputGuest.toLowerCase().trim().equals(guests[i].toLowerCase().trim())) {
                 isGuestHere = true;
                 break;
             }
