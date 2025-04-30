@@ -30,18 +30,32 @@ public class CheckGuest {
 
         inputGuest = sc.nextLine();
 
-        for (int i = 0; i < guests.length; i++) {
+        // for (int i = 0; i < guests.length; i++) {
+        //     if (inputGuest.toLowerCase().trim().equals(guests[i].toLowerCase().trim())) {
+        //         isGuestHere = true;
+        //         break;
+        //     }
+        // }
+
+        // if (isGuestHere) {
+        //     System.out.println("complimenti hai passato i controlli di sicurezza, entra pure!");
+        // } else {
+        //     System.out.println("malissimo sembra che tu non sia stato invitato, via di qui!!!");
+
+        // }
+
+
+        //bonus section with while loop
+        int i = 0;
+        while (!isGuestHere) {
+            i++;
             if (inputGuest.toLowerCase().trim().equals(guests[i].toLowerCase().trim())) {
                 isGuestHere = true;
-                break;
+                System.out.println("entra pure,sei in lista");
+            } else if (i == guests.length - 1) {
+                isGuestHere = true;
+                System.out.println("niente, non sei in lista, via di qui!!");
             }
-        }
-
-        if (isGuestHere) {
-            System.out.println("complimenti hai passato i controlli di sicurezza, entra pure!");
-        } else {
-            System.out.println("malissimo sembra che tu non sia stato invitato, via di qui!!!");
-
         }
 
         // per andare a terminare lo scanner utilizzato
